@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+body{
+    font-family: 'Karla';
+    background: #eee;
+}
+
+.container{
+    margin: 1rem;
+    max-width: 375px;
+    border-radius: .5rem;
+    box-shadow: .1rem .1rem .9rem .2rem  rgba(92, 90, 90, 0.25);
+    overflow: hidden;
+}
+.common-content, 
+.sign-up,
+.about{
+    padding: 2rem;
+}
+
+
+        /* HEADER */
+
+
+.container .common-content{
+    background: #fff;
+    font-weight: 400;
+}
+.common-content h1{
+    color: hsl(179, 62%, 43%, 100%);
+}
+.common-content h2{
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: var(--Bright-Yellow);
+}
+.common-content p{
+    margin-top: 1.5rem;
+    color: var(--Grayish-Blue);
+    line-height: 1.7rem;
+    font-size: 15px;
+}
+
+
+/* Middle Section */
+
+.sign-up{
+    background: hsl(179, 62%, 43%, 100%);
+}
+.sign-up h1{
+    color: #fff;
+    font-size: 1.2rem;
+}
+.sign-up h2{
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.sign-up h2 span{
+    color: hsl(204, 43%, 93%, 60%);
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+.sign-up p{
+    margin-top: .5rem;
+    color: var(--Light-Gray);
+    font-weight: 400;
+}
+
+.sign-up button{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    border-radius:  .3rem;
+    border: none;
+    background: var(--Bright-Yellow);
+    box-shadow: .1rem .1rem .9rem .2rem  rgba(92, 90, 90, 0.25);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Karla';
+}
+
+
+    /* ABOUT US */
+
+
+.about{
+    background: hsl(179, 62%, 43%, 78%);
+    color: #fff;
+}
+
+.about h1{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+ul{
+    list-style-type: none;
+    margin-top: 1.3rem;
+}
+.about li{
+    color: var(--Light-Gray);
+    line-height: 1.5rem;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        height: 100vh;
+        display: flex;
+        
+     /* Cambia las siguientes lineas para experimentar👇*/
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        max-width: 600px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        grid-template-rows: repeat(2, auto );
+    }
+
+    .common-content{
+        grid-column: 1/3;
+    }
+    .sign-up{
+        grid-column: 1/2;
+    }
+    .about{
+        grid-column: 2/3;
+    }
+}
